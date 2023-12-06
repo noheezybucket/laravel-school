@@ -10,7 +10,7 @@
 
     </div>
 
-    <table class="table-bordered">
+    <table class="table-bordered" width='100%'>
         <thead align="center">
             <th>ID</th>
 
