@@ -1,33 +1,42 @@
-@extends('base');
+@extends('base')
 
-@section('title', 'Apprenants');
+@section('title', 'Apprenants')
 
 @section('content')
     <h1>Liste des apprenants</h1>
-    <button class="add button">Ajouter apprenant</button>
+    <div class="mb-2">
+        <button class="btn btn-primary">Ajouter un apprenant</button>
+        <a class="btn btn-link" href="{{ url('formations') }}">Voir la liste des formation</a>
 
-    <table width="70%" border="none">
-        <thead align="left">
+    </div>
+
+    <table class="table-bordered">
+        <thead align="center">
+            <th>ID</th>
+
             <th>Prenom</th>
             <th>Nom</th>
-            <th width="30%"></th>
+            <th width="30%" class="py-2">Actions</th>
         </thead>
-        <tr>
 
-            @foreach ($apprenants as $apprenant)
+        @foreach ($apprenants as $apprenant)
+            <tr align="center">
+                <td>
+                    {{ $apprenant->id }}
+                </td>
                 <td>
                     {{ $apprenant->name }}
                 </td>
                 <td>
                     {{ $apprenant->surname }}
                 </td>
-                <td>
-                    <button class="add button">Voir</button>
-                    <button class="update button">Modifier</button>
-                    <button class="delete button">Supprimer</button>
+                <td class="px-2 py-2">
+                    <button class="btn btn-light">Voir</button>
+                    <button class="btn btn-warning">Modifier</button>
+                    <button class="btn btn-danger">Supprimer</button>
 
                 </td>
-        </tr>
+            </tr>
         @endforeach
 
     </table>
