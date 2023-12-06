@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApprenantController;
+use App\Http\Controllers\FormationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,3 +20,4 @@ Route::get('/', function () {
 });
 
 Route::get('/apprenants', [ApprenantController::class, 'index']);
+Route::get('/formations', [FormationController::class, 'index']);
