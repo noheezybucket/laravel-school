@@ -1,20 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('base');
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Apprenants</title>
-    <style>
-        * {
-            font-family: 'Trebuchet MS';
-        }
-    </style>
-</head>
+@section('title', 'Apprenants');
 
-<body>
-    <h1>Bienvenue en G2GL</h1>
-</body>
+@section('content')
+    <h1>Liste des apprenants</h1>
+    <button class="add button">Ajouter apprenant</button>
 
-</html>
+    <table width="70%" border="none">
+        <thead align="left">
+            <th>Prenom</th>
+            <th>Nom</th>
+            <th width="30%"></th>
+        </thead>
+        <tr>
+
+            @foreach ($apprenants as $apprenant)
+                <td>
+                    {{ $apprenant->name }}
+                </td>
+                <td>
+                    {{ $apprenant->surname }}
+                </td>
+                <td>
+                    <button class="add button">Voir</button>
+                    <button class="update button">Modifier</button>
+                    <button class="delete button">Supprimer</button>
+
+                </td>
+        </tr>
+        @endforeach
+
+    </table>
+@endsection

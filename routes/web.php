@@ -15,11 +15,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('base');
 });
 
-Route::get('/apprenants', function () {
-    return view('apprenants');
-});
-
-Route::get('/liste-apprenants', [ApprenantController::class, 'index']);
+Route::get('/apprenants', [ApprenantController::class, 'index']);
