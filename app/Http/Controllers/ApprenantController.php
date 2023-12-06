@@ -11,6 +11,6 @@ class ApprenantController extends Controller
     public function index()
     {
         // return Apprenant::all();
-        return view('liste-apprenants', ['apprenants' => Apprenant::all()]);
+        return view('apprenants', ['apprenants' => Apprenant::all()]);
     }
 }
