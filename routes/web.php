@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApprenantController;
+use App\Http\Controllers\FormationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,8 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/apprenants', function () {
-    return view('apprenants');
-});
-
-Route::get('/liste-apprenants', [ApprenantController::class, 'index']);
+Route::get('/apprenants', [ApprenantController::class, 'index']);
+Route::get('/formations', [FormationController::class, 'index']);

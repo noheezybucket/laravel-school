@@ -1,36 +1,30 @@
 @extends('base')
-
-@section('title', 'Apprenants')
+@section('title', 'Formations')
 
 @section('content')
-    <h1>Liste des apprenants</h1>
-
+    <h1>Liste des formations</h1>
     <div class="mb-2">
-        <button class="btn btn-primary">Ajouter un apprenant</button>
-        <a class="btn btn-link" href="{{ url('formations') }}">Voir la liste des formation</a>
+        <button class=" btn btn-primary">Ajouter une formation</button>
+        <a class=" btn btn-link" href="{{ url('apprenants') }}">Voir la liste des apprenants</a>
         <a class="btn btn-link" href="{{ url('/') }}">Retourner à l'accueil</a>
 
     </div>
 
     <table class="table-bordered" width='100%'>
         <thead align="center">
-            <th>ID</th>
+            <th class="p-2">ID</th>
 
-            <th>Prenom</th>
-            <th>Nom</th>
-            <th width="30%" class="py-2">Actions</th>
+            <th>Nom de la formation</th>
+            <th width="30%">Actions</th>
         </thead>
 
-        @foreach ($apprenants as $apprenant)
+        @foreach ($formations as $formation)
             <tr align="center">
                 <td>
-                    {{ $apprenant->id }}
+                    {{ $formation->id }}
                 </td>
                 <td>
-                    {{ $apprenant->name }}
-                </td>
-                <td>
-                    {{ $apprenant->surname }}
+                    {{ $formation->name }}
                 </td>
                 <td class="px-2 py-2">
                     <button class="btn btn-light">Voir</button>
