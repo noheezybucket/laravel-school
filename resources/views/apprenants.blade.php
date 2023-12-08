@@ -4,9 +4,11 @@
 
 @section('content')
     <h1>Liste des apprenants</h1>
+
     <div class="mb-2">
         <button class="btn btn-primary">Ajouter un apprenant</button>
         <a class="btn btn-link" href="{{ url('formations') }}">Voir la liste des formation</a>
+        <a class="btn btn-link" href="{{ url('/') }}">Retourner à l'accueil</a>
 
     </div>
 

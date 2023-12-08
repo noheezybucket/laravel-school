@@ -6,6 +6,7 @@
     <div class="mb-2">
         <button class=" btn btn-primary">Ajouter une formation</button>
         <a class=" btn btn-link" href="{{ url('apprenants') }}">Voir la liste des apprenants</a>
+        <a class="btn btn-link" href="{{ url('/') }}">Retourner à l'accueil</a>
 
     </div>
 
